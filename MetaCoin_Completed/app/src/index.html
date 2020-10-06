@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MetaCoin | Truffle Webpack Demo w/ Frontend</title>
+  </head>
+  <style>
+    input {
+      display: block;
+      margin-bottom: 12px;
+    }
+  </style>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+ 
+  <body>
+    <div class="container">
+    <h1>MetaCoin — Example Truffle Dapp</h1>
+    <p>Current Account: <strong class="account"></strong></p>
+    <p>Current network: <strong class="network"></strong></p>
+    <p>You have <strong class="balance">loading...</strong> META</p>
+
+    <h1>Send MetaCoin</h1>
+
+    <label for="amount">Amount:</label>
+    <input type="text" class="form-control" id="amount" placeholder="e.g. 95" />
+
+    <label for="receiver">To address:</label>
+    <input
+    class="form-control"
+      type="text"
+      id="receiver"
+      placeholder="e.g. 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"
+    />
+
+    <button  class="btn btn-primary" onclick="App.sendCoin()">Send MetaCoin</button>
+
+    <p id="status"></p>
+      <br>
+                <hr>
+                <h1>Check MetaCoin</h1>
+                
+                <br><label for="receiver">Address:</label><input class="form-control" type="text" id="address1" placeholder="e.g., 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"></input>
+                <br><br><button id="send" class="btn btn-primary" onclick="App.checkCoin()">Check MetaCoin</button>
+                <br><label for="amount">Balance :</label><input class="form-control" type="text" id="balance1" placeholder="e.g., 95"></input>
+                <br><br>
+                <span id="status1"></span>
+                <br>
+                <hr>
+                <h1>Check MetaCoin in Ether</h1>
+                
+                <br><label for="receiver">Address:</label><input type="text" class="form-control"  id="address2" placeholder="e.g., 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"></input>
+                <br><br><button id="send" onclick="App.GetCoinInEther()">Check MetaCoin</button>
+                <br><label for="amount">Balance :</label><input type="text" class="form-control"  id="balance2" placeholder="e.g., 95"></input> ETH
+                <br><br>
+                <span id="status2"></span>
+                <br>
+    <p>
+      <strong>Hint:</strong> open the browser developer console to view any
+      errors and warnings.
+    </p>
+    <hr>
+  
+    <table id="mytable" class="table table-bordred table-striped">              
+      <thead>
+        <th>Account</th>
+        <th><p id="TokeName">Meta</p></th>
+        <th><p id="TokeName">Ether</p></th>
+      </thead>
+      <tbody id="accountlist">
+        
+        </tbody>
+    </table>
+  </div>
+  <!-- <script src="metacoin_abi.js"></script> -->
+    <script src="index.js"></script>
+  </body>
+</html>
